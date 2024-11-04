@@ -1,11 +1,15 @@
+close all
 
+% Gráfico do sinal de controle pelo tempo
 figure(1)
 plot(out.v)
 grid
 title('Sinal de controle x Tempo')
 
-x = [-5:0.01:5];
+x = linspace(-max(y0),max(y0));
 
+% Gráfico do sinal da derivada de Y por Y (plano de fase) e lugar
+% geométrico
 figure(2)
 plot(out.Y.Data,out.Ydot.Data)
 hold on
@@ -17,6 +21,7 @@ xlabel('Y')
 title('Ydot x Y')
 grid on;
 
+% Gráfico do sinal de Y pelo tempo
 figure(3)
 plot(out.Y.Time,out.Y.Data)
 ylabel('Ydot');
@@ -24,6 +29,7 @@ xlabel('Y')
 title('Y x t')
 grid on;
 
+% Gráfico do sinal da derivada de Y pelo tempo
 figure(4)
 plot(out.Ydot.Time,out.Ydot.Data)
 ylabel('Ydot');
