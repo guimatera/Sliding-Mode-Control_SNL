@@ -6,7 +6,7 @@ plot(out.v)
 grid
 title('Sinal de controle x Tempo')
 
-x = linspace(-max(y0),max(y0));
+x = linspace(-(max(y0)+1),max(y0)+1);
 
 % Gráfico do sinal da derivada de Y por Y (plano de fase) e lugar
 % geométrico
