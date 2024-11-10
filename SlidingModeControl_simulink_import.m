@@ -1,19 +1,20 @@
 close all
 
-
 x = linspace(-(max(y0)+1),max(y0)+1);
 
 % Gráfico do sinal de controle pelo tempo
 figure(1)
 plot(out.v)
-grid
+ylabel('v');
+xlabel('T(s)');
+grid on;
 title('Sinal de controle x Tempo')
 
 % Gráfico do sinal da derivada de Y pelo tempo
 figure(2)
 plot(out.Ydot.Time,out.Ydot.Data)
 ylabel('Ydot');
-xlabel('T(s)')
+xlabel('T(s)');
 title('Ydot x t')
 grid on;
 
@@ -37,4 +38,3 @@ ylabel('Ydot');
 xlabel('Y')
 title('Ydot x Y')
 grid on;
-
